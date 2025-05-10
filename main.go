@@ -47,7 +47,7 @@ func getStatus(c *gin.Context) {
 		for _, n := range ctr.Names {
 			n = strings.Replace(n, "/", "", -1)
 			if n == c.Query("service") {
-				re := regexp.MustCompile(`Up\s+(\d+)\s+`)
+				re := regexp.MustCompile(`Up\s+`)
 				match := re.FindStringSubmatch(ctr.Status)
 				if match != nil {
 					c.IndentedJSON(http.StatusOK, map[string]string{"status": "up"})
