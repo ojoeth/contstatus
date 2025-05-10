@@ -1,4 +1,4 @@
-module uk.joeth.dockergo
+module github.com/ojoeth/contstatus
 
 go 1.24.3
 
